@@ -11,11 +11,11 @@ set(ALL_LIBS
         m)
 
 set(SOURCE_FILES
-        main.cpp
-        player.cpp
-        player.h
-        Stars.cpp
-        Stars.h)
+        src/main.cpp
+        src/player.cpp
+        src/player.h
+        src/Stars.cpp
+        src/Stars.h)
 
 add_executable(OpenGL ${SOURCE_FILES})
 
