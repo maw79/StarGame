@@ -24,12 +24,12 @@ point2D player::get_position()
 
 void player::accelerate()
 {
-    speed++;
+    speed--;
 }
 
 void player::decelerate()
 {
-    speed--;
+    speed++;
 }
 
 //Left is true, right is false

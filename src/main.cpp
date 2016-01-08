@@ -125,7 +125,8 @@ void g_idle(void)
 
     //std::cout << "Time test :" << fDeltaTime << std::endl;
 
-    ship.idle();
+    //ship.idle();
+    star.Move_Stars(ship.speed);
 
     glutPostRedisplay();
 }

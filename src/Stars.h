@@ -17,6 +17,7 @@ public:
     void Gen_Stars();
     void Display_Stars();
     void Read_Stars();
+    void Move_Stars(int speed);
 };
 
 
