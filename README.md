@@ -3,7 +3,7 @@ StarGame placeholder name
 
 ////////////////////////Run////////////////////////
 
-Run the executable the following command on UNIX
+Run the executable the following command on UNIX:
 "./main"
 
 ////////////////compile from source////////////////
