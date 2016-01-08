@@ -28,6 +28,7 @@ public:
     void Turn(bool LR);
     void draw_ship();
     void shoot();
+    void idle();
 };
 
 

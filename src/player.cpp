@@ -77,3 +77,15 @@ void player::shoot()
 {
 
 }
+
+void player::idle()
+{
+    if (speed <= 0)
+    {
+        speed = 0;
+    }
+    else if (speed > 0)
+    {
+        decelerate();
+    }
+}

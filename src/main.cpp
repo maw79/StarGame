@@ -7,6 +7,7 @@
 #include <GL/gl.h>
 #include <GL/freeglut.h>
 #include <iostream>
+#include <ctime>
 #include "player.h"
 #include "Stars.h"
 
@@ -18,12 +19,14 @@ void g_keyboard(unsigned char key, int x, int y);
 void g_mouse(int button, int state, int x, int y);
 void g_idle();
 
+std::clock_t g_PreviousTicks;
+std::clock_t g_CurrentTicks;
+
 player ship;
 Stars star;
 
 int main (int argc, char** argv)
 {
-    std::cout << "Start" << std::endl;
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE|GLUT_RGB|GLUT_DEPTH);
 
@@ -45,7 +48,7 @@ int main (int argc, char** argv)
 
 void init()
 {
-    std::cout << "Init" << std::endl;
+    std::cout << "openGL Init" << std::endl;
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glOrtho(-100,100,-100,100,-100,+100);
@@ -53,7 +56,7 @@ void init()
     ship.set_position(0,0);
 
     star.Gen_Stars();
-    star.Read_Stars();
+    //star.Read_Stars();
 }
 
 void g_display()
@@ -114,5 +117,15 @@ void g_mouse(int button, int state, int x, int y)
 
 void g_idle(void)
 {
+    g_CurrentTicks = std::clock();
+    float deltaTicks = ( g_CurrentTicks - g_PreviousTicks );
+    g_PreviousTicks = g_CurrentTicks;
 
+    float fDeltaTime = deltaTicks / (float)CLOCKS_PER_SEC;
+
+    //std::cout << "Time test :" << fDeltaTime << std::endl;
+
+    ship.idle();
+
+    glutPostRedisplay();
 }
