@@ -13,6 +13,7 @@ class Stars {
 private:
     bool StarS[200][200];
 public:
+    bool Debug;
     Stars();
     void Gen_Stars();
     void Display_Stars();

@@ -22,6 +22,8 @@ void g_idle();
 std::clock_t g_PreviousTicks;
 std::clock_t g_CurrentTicks;
 
+bool Debug = false;
+
 player ship;
 Stars star;
 
@@ -48,7 +50,12 @@ int main (int argc, char** argv)
 
 void init()
 {
-    std::cout << "openGL Init" << std::endl;
+    if(Debug)
+    {
+        std::cout << "openGL Init" << std::endl;
+    }
+    ship.Debug = Debug;
+    star.Debug = Debug;
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glOrtho(-100,100,-100,100,-100,+100);
@@ -87,6 +94,10 @@ void g_spKeyboard(int key, int x, int y)
 
 void g_keyboard(unsigned char key, int x, int y)
 {
+    if(Debug)
+    {
+        std::cout << (int)key << std::endl;
+    }
     switch (key) {
         case 27: // Esc
             glutLeaveMainLoop();

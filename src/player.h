@@ -19,6 +19,7 @@ protected:
 public:
     point2D position;
     int speed;
+    bool Debug;
 
     player();
     void set_position(float x, float y);

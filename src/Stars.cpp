@@ -6,7 +6,10 @@
 
 Stars::Stars()
 {
-    std::cout << "Stars constructor" << std::endl;
+    if(Debug)
+    {
+        std::cout << "Stars constructor" << std::endl;
+    }
     for(int i = 0; i < 200; i++)
     {
         for (int j = 0; j < 200; j++)
@@ -69,7 +72,10 @@ void Stars::Move_Stars(int speed)
 {
     if(speed != 0)
     {
-        std::cout << "start clone" << std::endl;
+        if(Debug)
+        {
+            std::cout << "start clone" << std::endl;
+        }
         //clone start
         bool starClone[200][200];
         for(int i = 0; i < 200; i++)

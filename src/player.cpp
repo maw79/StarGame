@@ -6,7 +6,10 @@
 
 player::player()
 {
-    std::cout << "Player constructor" << std::endl;
+    if(Debug)
+    {
+        std::cout << "Player constructor" << std::endl;
+    }
     position.x = 0.0;
     position.y = 0.0;
 }
