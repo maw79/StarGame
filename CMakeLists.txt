@@ -15,7 +15,9 @@ set(SOURCE_FILES
         src/player.cpp
         src/player.h
         src/Stars.cpp
-        src/Stars.h src/LinkedList.cpp src/LinkedList.h)
+        src/Stars.h
+        src/LinkedList.cpp
+        src/LinkedList.h)
 
 add_executable(OpenGL ${SOURCE_FILES})
 
