@@ -24,6 +24,9 @@ std::clock_t g_CurrentTicks;
 
 bool Debug = false;
 
+using std::cout;
+using std::endl;
+
 player ship;
 Stars star;
 
@@ -52,7 +55,7 @@ void init()
 {
     if(Debug)
     {
-        std::cout << "openGL Init" << std::endl;
+        cout << "openGL Init" << endl;
     }
     ship.Debug = Debug;
     star.Debug = Debug;
@@ -96,7 +99,7 @@ void g_keyboard(unsigned char key, int x, int y)
 {
     if(Debug)
     {
-        std::cout << (int)key << std::endl;
+        cout << (int)key << endl;
     }
     switch (key) {
         case 27: // Esc
