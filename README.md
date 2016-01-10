@@ -1,5 +1,9 @@
 # StarGame
-StarGame placeholder name
+
+this name is just a placeholder
+
+this is going to be a c++ game that is in the style of asteroids with a 
+procedurally generated world and much to do in it
 
 ////////////////////////Run////////////////////////
 
