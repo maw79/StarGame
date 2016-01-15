@@ -17,7 +17,9 @@ set(SOURCE_FILES
         src/Stars.cpp
         src/Stars.h
         src/chunk.cpp
-        src/chunk.h src/map.cpp src/map.h)
+        src/chunk.h
+        src/map.cpp
+        src/map.h)
 
 add_executable(OpenGL ${SOURCE_FILES})
 
