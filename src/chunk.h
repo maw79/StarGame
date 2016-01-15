@@ -12,7 +12,7 @@ class chunk {
 public:
     int x;
     int y;
-    Stars chunks;
+    Stars chunkd;
     chunk(int z, int w);
 };
 

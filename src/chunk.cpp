@@ -6,8 +6,8 @@
 
 chunk::chunk(int z, int w)
 {
-    chunks.Stars();
-    chunks.Gen_Stars();
+    chunkd.Stars();
+    chunkd.Gen_Stars();
     x = z;
     y = w;
 }

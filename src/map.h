@@ -10,6 +10,7 @@
 
 class map {
 public:
+    chunk chunks[200][200];
     map();
 };
 
