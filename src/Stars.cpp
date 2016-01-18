@@ -36,23 +36,6 @@ void Stars::Gen_Stars()
     }
 }
 
-void Stars::Display_Stars()
-{
-    glColor3f(1.0,1.0,1.0);
-    for(int i = 0; i < 200; i++)
-    {
-        for (int j = 0; j < 200; j++)
-        {
-            if(StarS[i][j])
-            {
-                glBegin(GL_POINTS);
-                glVertex2f((i-100),(j-100));
-                glEnd();
-            }
-        }
-    }
-}
-
 void Stars::Read_Stars()
 {
     std::cout << "Reading Star Locations" << std::endl;

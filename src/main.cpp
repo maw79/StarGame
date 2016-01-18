@@ -10,6 +10,7 @@
 #include <ctime>
 #include "player.h"
 #include "Stars.h"
+#include "map.h"
 
 void init();
 void g_display();
@@ -28,7 +29,7 @@ using std::cout;
 using std::endl;
 
 player ship;
-Stars star;
+map cracked;
 
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
@@ -57,14 +58,12 @@ void init()
         cout << "openGL Init" << endl;
     }
     ship.Debug = Debug;
-    star.Debug = Debug;
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glOrtho(-100,100,-100,100,-100,+100);
 
     ship.set_position(0,0);
 
-    star.Gen_Stars();
     //star.Read_Stars();
 }
 
@@ -78,8 +77,6 @@ void g_display()
     gluLookAt(0,0,10,0,0,0,0,1,0);
 
     ship.draw_ship();
-
-    star.Display_Stars();
 
     glutSwapBuffers();
 }

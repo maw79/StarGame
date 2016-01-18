@@ -10,6 +10,7 @@
 
 class map {
 public:
+    bool Debug;
     chunk chunks[200][200];
     map();
 };
