@@ -136,10 +136,10 @@ void g_idle(void)
 
     float fDeltaTime = deltaTicks / (float)CLOCKS_PER_SEC;
 
-    //std::cout << "Time test :" << fDeltaTime << std::endl;
-
-    //ship.idle();
-    star.Move_Stars(ship.speed);
+    if (Debug)
+    {
+        std::cout << "Time test :" << fDeltaTime << std::endl;
+    }
 
     glutPostRedisplay();
 }
