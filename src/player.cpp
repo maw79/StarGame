@@ -50,6 +50,7 @@ void player::Turn(bool LR)
 
 void player::draw_ship()
 {
+
     glColor3f(1.0,1.0,1.0);
 
     glPushMatrix();
